@@ -1,0 +1,14 @@
+---
+title: Changelog
+description: Changelog for the CMDS
+---
+
+All notable changes to the CMDS will be documented in this file.
+
+The format is based on Keep a Changelog and this project adheres to Semantic Versioning.
+
+## v.0.1.0 - 2024-xx-xx
+
+### Added
+
+- First beta version released
