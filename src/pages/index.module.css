@@ -1,23 +1,107 @@
-/**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
- */
-
 .heroBanner {
-  padding: 4rem 0;
-  text-align: center;
   position: relative;
-  overflow: hidden;
+  display: block;
+  overflow: visible;
+  text-align: center;
+  padding: 4rem 1.5rem 8rem;
+  background: #f8fbff;
 }
 
-@media screen and (max-width: 996px) {
-  .heroBanner {
-    padding: 2rem;
-  }
+.heroBanner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120%;
+  background: url("/img/hero-bg.svg") center / cover no-repeat;
+  pointer-events: none;
+}
+
+.heroBanner > * {
+  position: relative;
+  z-index: 1;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logoWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+  margin-bottom: 2.5rem;
+  padding: 0.35rem;
+  background: #fff;
+  border-radius: 999px;
+  box-shadow: 0 8px 24px rgba(14, 116, 144, 0.08);
+}
+
+.logoWrap img {
+  display: block;
+  border-radius: 999px;
 }
 
 .buttons {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0 0;
+}
+
+.primaryButton {
+  min-width: 17.5rem;
+  padding: 1rem 1.5rem;
+  background: #0284c7;
+  border: 1px solid #0284c7;
+  color: #fff;
+}
+
+.primaryButton:hover {
+  background: #0369a1;
+  border-color: #0369a1;
+  color: #fff;
+}
+
+.secondaryButton {
+  min-width: 17.5rem;
+  padding: 1rem 1.5rem;
+  background: #38bdf8;
+  border: 1px solid #0284c7;
+  color: #0f172a;
+}
+
+.secondaryButton:hover {
+  background: #7dd3fc;
+  color: #0f172a;
+}
+
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    padding: 2rem 1rem 6rem;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    min-width: 100%;
+  }
+}
+
+[data-theme="dark"] .heroBanner {
+  background: #0f172a;
+}
+
+[data-theme="dark"] .logoWrap {
+  background: #1e293b;
+}
+
+[data-theme="dark"] .secondaryButton {
+  color: #0f172a;
 }

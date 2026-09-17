@@ -7,7 +7,7 @@ import type * as Preset from "@docusaurus/preset-classic";
 const config: Config = {
   title: "CMDS Specification",
   tagline:
-    "A simple and intuitive way to organize and describe clinical research datasets",
+    "A simple and intuitive way to organize and describe clinical multimodal research datasets",
   favicon: "img/favicon.ico",
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -42,26 +42,22 @@ const config: Config = {
       {
         docs: {
           sidebarPath: "./sidebars.ts",
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
-        },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ["rss", "atom"],
-            xslt: true,
+          editUrl: "https://github.com/AI-READI/cmds-docs/tree/main/",
+          showLastUpdateAuthor: true,
+          showLastUpdateTime: true,
+          lastVersion: "current",
+          versions: {
+            "0.1.0": {
+              label: "Version 0.1.0",
+              path: "0.1.0",
+            },
+            current: {
+              label: "Version 0.1.1",
+              path: "0.1.1",
+            },
           },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
-          // Useful options to enforce blogging best practices
-          onInlineTags: "warn",
-          onInlineAuthors: "warn",
-          onUntruncatedBlogPosts: "warn",
         },
+        blog: false,
         theme: {
           customCss: "./src/css/custom.css",
         },
@@ -70,27 +66,29 @@ const config: Config = {
   ],
 
   themeConfig: {
-    // Replace with your project's social card
-    image: "img/docusaurus-social-card.jpg",
+    image: "img/android-chrome-512x512.png",
     colorMode: {
       respectPrefersColorScheme: true,
     },
     navbar: {
       title: "CMDS Specification",
       logo: {
-        alt: "My Site Logo",
-        src: "img/logo.svg",
+        alt: "CMDS Specification",
+        src: "img/android-chrome-192x192.png",
       },
       items: [
         {
           type: "docSidebar",
-          sidebarId: "tutorialSidebar",
+          sidebarId: "docsSidebar",
           position: "left",
-          label: "Tutorial",
+          label: "Documentation",
         },
-        { to: "/blog", label: "Blog", position: "left" },
         {
-          href: "https://github.com/facebook/docusaurus",
+          type: "docsVersionDropdown",
+          position: "right",
+        },
+        {
+          href: "https://github.com/AI-READI/cmds-docs",
           label: "GitHub",
           position: "right",
         },
@@ -103,8 +101,12 @@ const config: Config = {
           title: "Docs",
           items: [
             {
-              label: "Tutorial",
-              to: "/docs/intro",
+              label: "Introduction",
+              to: "/docs/0.1.1/",
+            },
+            {
+              label: "Specification",
+              to: "/docs/0.1.1/specification/general-principles",
             },
           ],
         },
@@ -112,16 +114,16 @@ const config: Config = {
           title: "Community",
           items: [
             {
-              label: "Stack Overflow",
-              href: "https://stackoverflow.com/questions/tagged/docusaurus",
+              label: "AI-READI",
+              href: "https://aireadi.org",
             },
             {
-              label: "Discord",
-              href: "https://discordapp.com/invite/docusaurus",
+              label: "AI-READI Docs",
+              href: "https://docs.aireadi.org",
             },
             {
-              label: "X",
-              href: "https://x.com/docusaurus",
+              label: "Contact",
+              href: "mailto:contact@aireadi.org",
             },
           ],
         },
@@ -130,7 +132,7 @@ const config: Config = {
           items: [
             {
               label: "GitHub",
-              href: "https://github.com/ai-readi/cmds-docs",
+              href: "https://github.com/AI-READI/cmds-docs",
             },
           ],
         },
