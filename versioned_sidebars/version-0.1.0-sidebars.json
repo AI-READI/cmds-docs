@@ -1,0 +1,55 @@
+{
+  "docsSidebar": [
+    "index",
+    "about",
+    "referencing",
+    {
+      "type": "category",
+      "label": "CMDS Specification",
+      "items": [
+        "specification/general-principles",
+        "specification/root-directory-structure",
+        "specification/datatype-directory-structure",
+        {
+          "type": "category",
+          "label": "Root-level metadata files",
+          "items": [
+            "specification/root-metadata-files/readme",
+            "specification/root-metadata-files/license",
+            "specification/root-metadata-files/healthsheet",
+            "specification/root-metadata-files/changelog",
+            "specification/root-metadata-files/study-description",
+            "specification/root-metadata-files/dataset-description",
+            "specification/root-metadata-files/dataset-structure-description",
+            "specification/root-metadata-files/participants"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "category",
+      "label": "Implementing the CMDS",
+      "items": [
+        "implementing-cmds/step-by-step-guide",
+        "implementing-cmds/templates",
+        "implementing-cmds/examples"
+      ]
+    },
+    {
+      "type": "category",
+      "label": "Design Rationale",
+      "items": [
+        "design-rationale/overview"
+      ]
+    },
+    {
+      "type": "category",
+      "label": "Resources",
+      "items": [
+        "resources/changelog",
+        "resources/governance",
+        "resources/contributing"
+      ]
+    }
+  ]
+}
