@@ -1,6 +1,7 @@
 import { themes as prismThemes } from "prism-react-renderer";
 import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
+import type { PluginOptions as SearchLocalOptions } from "@easyops-cn/docusaurus-search-local";
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
@@ -62,6 +63,18 @@ const config: Config = {
           customCss: "./src/css/custom.css",
         },
       } satisfies Preset.Options,
+    ],
+  ],
+
+  themes: [
+    [
+      "@easyops-cn/docusaurus-search-local",
+      {
+        hashed: true,
+        indexBlog: false,
+        docsRouteBasePath: "/docs",
+        docsDir: ["docs", "versioned_docs"],
+      } satisfies SearchLocalOptions,
     ],
   ],
 
